@@ -15,7 +15,7 @@ class CustomerViewSet(ModelViewSet):
         if not isinstance(fio, str):  # валидация
             return Response(data={"message": "fio должно быть строкой."}, status=status.HTTP_400_BAD_REQUEST)
         if not fio:
-            return Response(data={"message": "fio не может быть пустым"}, status=status.HTTP_400_BAD_REQUEST)
+            return Response(data={"message": "fio не может быть пустым."}, status=status.HTTP_400_BAD_REQUEST)
 
         age = request.data.get("age")
         if not isinstance(age, int):
